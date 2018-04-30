@@ -7,11 +7,15 @@ function addItems(){
 	{
 			var li=document.createElement("li");
 			var btn=document.createElement("button");
-			li.appendChild(document.createTextNode(input.value));
+			var spn=document.createElement("span");
+			spn.appendChild(document.createTextNode(input.value));
+			li.appendChild(spn);
+			spn.classList.add("spn1");
 			// btn.appendChild(document.createTextNode("Delete"));
 			btn.classList.add("del");
 			li.appendChild(btn);
 			ul.appendChild(li);
+			li.classList.add("list-group-item");
 			li.classList.add("done");
 			li.classList.toggle("done");
 			li.addEventListener("click",function(){
